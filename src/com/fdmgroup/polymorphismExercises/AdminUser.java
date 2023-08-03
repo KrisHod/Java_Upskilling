@@ -22,14 +22,15 @@ public class AdminUser extends UserAccount {
 	}
 
 	public boolean changePassword(String newPass, String confirmPass) {
-	    if (newPass.equals(confirmPass) && newPass.length() >= minAdminPasswordLength) {
-	        this.setPassword(newPass);
-	        System.out.println("Password changed successfully.");
-	        return true;
-	    } else {
-	        System.out.println("Password change failed. Make sure the passwords match and are at least " + minAdminPasswordLength + " characters long.");
-	        return false;
-	    }
+		if (newPass.equals(confirmPass) && newPass.length() >= minAdminPasswordLength) {
+			this.setPassword(newPass);
+			System.out.println("Password changed successfully.");
+			return true;
+		} else {
+			System.out.println("Password change failed. Make sure the passwords match and are at least "
+					+ minAdminPasswordLength + " characters long.");
+			return false;
+		}
 	}
 
 	public void changePassword(String newPass, String confirmPass, UserAccount account) {

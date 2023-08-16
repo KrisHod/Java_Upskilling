@@ -1,5 +1,7 @@
 package com.fdmgroup.solidExercises;
 
-public class Employee3 {
-
+public interface Employee3 {
+    int getEmployeeId();
+    String getEmployeeName();
+    double getSalary();
 }
